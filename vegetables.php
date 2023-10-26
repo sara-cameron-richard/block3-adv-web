@@ -80,6 +80,6 @@ $zucchini = new Vegetable();
 // echo $spinach->name, " tastes ", $spinach->taste;
 // echo $zucchini->name, " age is ", $zucchini->age;
 
-echo "this vegetable is ", $carrot->name, $carrot->getName(), " and you should ", $carrot->getAction(), " . "; 
+echo "this vegetable is ", $carrot->name, " ", $carrot->getName(), " and you should ", $carrot->getAction(), " . "; 
 echo "this vegetable is ", $spinach->name, " and you should ", $spinach->getAction(), " . ";
 echo "this vegetable is ", $zucchini->name, " and you should ", $zucchini->getAction();
