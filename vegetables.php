@@ -26,7 +26,6 @@ class Vegetable
         $this->method = $method;
     }
 
-
     public function getName()
     {
         return $this->name;
@@ -39,6 +38,9 @@ class Vegetable
     // }
     public function getAmount()
     {
+        if ($this->amount == 0) {
+            return "Oops! You don't have any $this->name left."; //added function if stocks depleted
+        }
         return $this->amount;
     }
 
@@ -59,6 +61,9 @@ class Vegetable
     // }
     public function getAge() //age includes a funtion that does not return the age but suggestions for the user
     {
+        if ($this->amount == 0) { //added function if stocks depleted
+            return '';
+        }
         if ($this->age == 1) {
             return "store this for later";
         } elseif ($this->age == 2) {
@@ -77,7 +82,16 @@ class Vegetable
     // }
     public function getMethod()
     {
-        return $this->method;
+        if ($this->amount == 0) { //added function if stocks depleted
+            return '';
+        }
+        if ($this->age == 1) {
+            return '';
+        }
+            if ($this->age == 3) {
+                return '';
+            }
+        return "$this->method is a good method for cooking $this->name";
     }
 }
 
@@ -100,7 +114,7 @@ class Vegetable
 // echo $carrot->getMethod();
 
 //using __CONSTRUCT
-$carrot = new Vegetable('carrot', '200g', '1', 'roast');
+$carrot = new Vegetable('carrot', '100g', '1', 'roast');
 
 echo $carrot->getName();
 echo $carrot->getAmount();
@@ -155,6 +169,14 @@ echo $zucchini->getName();
 echo $zucchini->getAmount();
 echo $zucchini->getAge();
 echo $zucchini->getMethod();
+
+//using __construct and testing for '0' amount (stocks depleted)
+$tomato = new Vegetable('tomato', '0', '1', 'salad');
+
+echo $tomato->getName();
+echo $tomato->getAmount();
+echo $tomato->getAge();
+echo $tomato->getMethod();
 
 
 //**FIRST ATTEMPT AT CODE */
