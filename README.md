@@ -11,9 +11,10 @@ Block 3 - Advanced Web Programming Course Notes
 ### Notes on Files
 
 - [Vegetables](https://sara67.web582.com/block3-adv-web/exercises/vegetables.php)
-
 OOP: classes, objects, public, private, set/get, __construct, deposit/withdrawl
 
 - [Palindromes](https://sara67.web582.com/block3-adv-web/exercises/palindrome.php)
+Testing to see our logic (not good)
 
 - [Arrays](https://sara67.web582.com/block3-adv-web/exercises/array.php)
+First class playing with logic and some basic coding
