@@ -39,7 +39,7 @@ class Vegetable
     public function getAmount()
     {
         if ($this->amount == 0) {
-            return "Oops! You don't have any $this->name left."; //added function if stocks depleted
+            return "Oops! You don't have any $this->name left. Time to go shopping!"; //added function if stocks depleted
         }
         return $this->amount;
     }
@@ -65,13 +65,13 @@ class Vegetable
             return '';
         }
         if ($this->age == 1) {
-            return "store this for later";
+            return "This is brand new. No rush to consume. You can store this for later.";
         } elseif ($this->age == 2) {
-            return "cook this now";
+            return "This is the perfect age to consume. Cook this very soon: ";
         } elseif ($this->age == 3) {
-            return "compost this, quickly";
+            return "Compost this, quickly. This is too old to consume.";
         } else {
-            return "verify the expiration date";
+            return "Verify the expiration date";
         }
     }
 
@@ -88,10 +88,20 @@ class Vegetable
         if ($this->age == 1) {
             return '';
         }
-            if ($this->age == 3) {
-                return '';
-            }
+        if ($this->age == 3) {
+            return '';
+        }
         return "$this->method is a good method for cooking $this->name";
+    }
+
+    public function deposit($inBalance)
+    {
+        $this->amount += $inBalance;
+    }
+
+    public function withdrawl($outBalance)
+    {
+        $this->amount -= $outBalance;
     }
 }
 
@@ -114,9 +124,11 @@ class Vegetable
 // echo $carrot->getMethod();
 
 //using __CONSTRUCT
-$carrot = new Vegetable('carrot', '100g', '1', 'roast');
+$carrot = new Vegetable('carrot', '100', '1', 'roast');
+$carrot->deposit(100);
+$carrot->withdrawl(80);
 
-echo $carrot->getName();
+echo "Current information for: ", $carrot->getName();
 echo $carrot->getAmount();
 echo $carrot->getAge();
 echo $carrot->getMethod();
@@ -139,9 +151,11 @@ echo $carrot->getMethod();
 
 
 //using __CONSTRUCT
-$spinach = new Vegetable('spinach', '400g', '2', 'steam');
+$spinach = new Vegetable('spinach', '400', '2', 'steam');
+$spinach->deposit(25);
+$spinach->withdrawl(300);
 
-echo $spinach->getName();
+echo "Current information for: ", $spinach->getName();
 echo $spinach->getAmount();
 echo $spinach->getAge();
 echo $spinach->getMethod();
@@ -163,17 +177,21 @@ echo $spinach->getMethod();
 // echo $zucchini->getMethod();
 
 //using __CONSTRUCT
-$zucchini = new Vegetable('zucchini', '500g', '3', 'bake');
+$zucchini = new Vegetable('zucchini', '500', '3', 'bake');
+$zucchini->deposit(200);
+$zucchini->withdrawl(700);
 
-echo $zucchini->getName();
+echo "Current information for: ", $zucchini->getName();
 echo $zucchini->getAmount();
 echo $zucchini->getAge();
 echo $zucchini->getMethod();
 
 //using __construct and testing for '0' amount (stocks depleted)
-$tomato = new Vegetable('tomato', '0', '1', 'salad');
+$tomato = new Vegetable('tomato', '0', '3', 'salad');
+$tomato->deposit(800);
+$tomato->withdrawl(300);
 
-echo $tomato->getName();
+echo "Current information for: ", $tomato->getName();
 echo $tomato->getAmount();
 echo $tomato->getAge();
 echo $tomato->getMethod();
