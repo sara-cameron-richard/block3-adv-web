@@ -2,7 +2,7 @@
 
 Block 3 - Advanced Web Programming Course Notes
 
-Sara Cameron 239-5067 (https://sara67.web582.com/block3-adv-web/index.html)
+[Sara Cameron 239-5067](https://sara67.web582.com/block3-adv-web/index.html)
 
 ### PHP Tutorial Reference
 
