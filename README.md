@@ -10,6 +10,6 @@ Sara Cameron 239-5067
 
 ### Notes on Files
 
--[OOP: Vegetables] (https://sara67.web582.com/block3-adv-web/exercises/vegetables.php)
+- [OOP: Vegetables](https://sara67.web582.com/block3-adv-web/exercises/vegetables.php)
 
 OOP: classes, objects, public, private, set/get, __construct, deposit/withdrawl
