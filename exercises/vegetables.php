@@ -6,8 +6,9 @@ class Vegetable
 {
     private $name;
     private $amount;
+    private $unit;
     private $age;
-    private $method;
+    private $prep;
 
     //create functions so that private properties are accessible outside class
 
@@ -18,12 +19,13 @@ class Vegetable
     // }
 
     //now using __constructor
-    public function __construct($name, $amount, $age, $method)
+    public function __construct($name, $amount, $unit, $age, $prep)
     {
         $this->name = $name;
         $this->amount = $amount;
+        $this->unit = $unit;
         $this->age = $age;
-        $this->method = $method;
+        $this->prep = $prep;
     }
 
     public function getName()
@@ -42,6 +44,11 @@ class Vegetable
             return "Oops! You don't have any $this->name left. Time to go shopping!"; //added function if stocks depleted
         }
         return $this->amount;
+    }
+
+    public function getUnit()
+    {
+        return $this->unit;
     }
 
     //function to set and get AGE
@@ -75,12 +82,12 @@ class Vegetable
         }
     }
 
-    //function to set and get METHOD
+    //function to set and get PREP
     // public function setMethod($method)
     // {
     //     $this->method = $method;
     // }
-    public function getMethod()
+    public function getPrep()
     {
         if ($this->amount == 0) { //added function if stocks depleted
             return '';
@@ -91,15 +98,15 @@ class Vegetable
         if ($this->age == 3) {
             return '';
         }
-        return "$this->method is a good method for cooking $this->name";
+        return "$this->prep is a good method for cooking $this->name";
     }
 
-    public function deposit($inBalance)
+    public function purchase($inBalance)
     {
         $this->amount += $inBalance;
     }
 
-    public function withdrawl($outBalance)
+    public function use($outBalance)
     {
         $this->amount -= $outBalance;
     }
@@ -124,14 +131,11 @@ class Vegetable
 // echo $carrot->getMethod();
 
 //using __CONSTRUCT
-$carrot = new Vegetable('carrot', '100', '1', 'roast');
-$carrot->deposit(100);
-$carrot->withdrawl(80);
+$carrot = new Vegetable('carrot', '5', 'lb', '1', 'roast');
+$carrot->purchase(5);
+$carrot->use(4);
 
-echo "Current information for: ", $carrot->getName();
-echo $carrot->getAmount();
-echo $carrot->getAge();
-echo $carrot->getMethod();
+echo "Current information for ", $carrot->getName() . ": " . $carrot->getAmount() . $carrot->getUnit() . " " . $carrot->getAge() . " " . $carrot->getPrep();
 
 //spinach
 // $spinach = new Vegetable();
@@ -151,14 +155,11 @@ echo $carrot->getMethod();
 
 
 //using __CONSTRUCT
-$spinach = new Vegetable('spinach', '400', '2', 'steam');
-$spinach->deposit(25);
-$spinach->withdrawl(300);
+$spinach = new Vegetable('spinach', '400', 'g', '2', 'steam');
+$spinach->purchase(25);
+$spinach->use(300);
 
-echo "Current information for: ", $spinach->getName();
-echo $spinach->getAmount();
-echo $spinach->getAge();
-echo $spinach->getMethod();
+echo "Current information for ", $spinach->getName() . ": " . $spinach->getAmount() . $spinach->getUnit() . " " . $spinach->getAge() . " " . $spinach->getPrep();
 
 //zucchini
 // $zucchini = new Vegetable();
@@ -177,24 +178,18 @@ echo $spinach->getMethod();
 // echo $zucchini->getMethod();
 
 //using __CONSTRUCT
-$zucchini = new Vegetable('zucchini', '500', '3', 'bake');
-$zucchini->deposit(200);
-$zucchini->withdrawl(700);
+$zucchini = new Vegetable('zucchini', '500', 'g', '3', 'bake');
+$zucchini->purchase(200);
+$zucchini->use(700);
 
-echo "Current information for: ", $zucchini->getName();
-echo $zucchini->getAmount();
-echo $zucchini->getAge();
-echo $zucchini->getMethod();
+echo "Current information for ", $zucchini->getName() . ": " . $zucchini->getAmount() . $zucchini->getUnit() . " " . $zucchini->getAge() . " " . $zucchini->getPrep();
 
 //using __construct and testing for '0' amount (stocks depleted)
-$tomato = new Vegetable('tomato', '0', '3', 'salad');
-$tomato->deposit(800);
-$tomato->withdrawl(300);
+$tomato = new Vegetable('tomato', '0', 'lb', '3', 'salad');
+$tomato->purchase(100);
+$tomato->use(50);
 
-echo "Current information for: ", $tomato->getName();
-echo $tomato->getAmount();
-echo $tomato->getAge();
-echo $tomato->getMethod();
+echo "Current information for ", $tomato->getName() . ": " . $tomato->getAmount() . $tomato->getUnit() . " " . $tomato->getAge() . " " . $tomato->getPrep();
 
 
 //**FIRST ATTEMPT AT CODE */
