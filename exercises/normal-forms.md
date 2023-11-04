@@ -77,7 +77,6 @@ Primary key is staff_no + patient_no
 | S1011    | P100       | 12 Aug 03        | 10:00            | S10        |
 | S1011    | P105       | 12 Aug 03        | 12:00            | S15        |
 | S1024    | P108       | 12 Aug 03        | 10:00            | S10        |
-| S1024    | P108       | 12 Aug 03        | 10:00            | S10        |
 | S1032    | P105       | 12 Aug 03        | 16:30            | S15        |
 | S1032    | P110       | 15 Aug 03        | 18:00            | S13        |
 
@@ -135,7 +134,7 @@ ORIGINAL TABLE 4
 | book       | genre   | author  | authorNation |
 | ---------- | ------- | ------- | ------------ |
 | Twenty     | SciFi   | Verne   | Fr           |
-| Jurney     | SciFi   | Verne   | Fr           |
+| Journey     | SciFi   | Verne   | Fr           |
 | Leaves     | Poetry  | Whitman | Am           |
 | AK         | LitFic  | Tolstoy | Ru           |
 | Confession | AutoBio | Tolstoy | Ru           |
@@ -147,12 +146,12 @@ Primary Key is book
 | book       | author  |
 | ---------- | ------- |
 | Twenty     | Verne   |
-| Jurney     | Verne   |
+| Journey     | Verne   |
 | Leaves     | Whitman |
 | AK         | Tolstoy |
 | Confession | Tolstoy |
 
-Primary Key is AuthorNation
+Primary Key is author
 
 | author  | authorNation |
 | ------- | ------------ |
@@ -167,7 +166,7 @@ Primary Key is book
 | book       | genre   |
 | ---------- | ------- |
 | Twenty     | SciFi   |
-| Jurney     | SciFi   |
+| Journey     | SciFi   |
 | Leaves     | Poetry  |
 | AK         | LitFic  |
 | Confession | AutoBio |
@@ -186,7 +185,7 @@ ORIGINAL TABLE 5
 
 3NF
 
-I have no idea what some of the column headings represent, so I am making am assumption: Date refers to the start date of the Unit (UnitID)
+I have no idea what some of the column headings represent, so I am making am assumption: Date refers to the start date of the Unit (UnitID) and UnitID refers to "semester"
 
 Primary key is StudentID + Topic
 
