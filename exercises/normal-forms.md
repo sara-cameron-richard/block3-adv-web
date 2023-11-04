@@ -12,11 +12,11 @@ ORIGINAL TABLE 1
 
 Primary Key is employee_id
 
-| employee_id | name  | state_code |
-| ----------- | ----- | ---------- |
-| e001        | alice | 26         |
-| e002        | bob   | 56         |
-| e003        | alice | 56         |
+| employee_id | name  |
+| ----------- | ----- |
+| e001        | alice |
+| e002        | bob   |
+| e003        | alice |
 
 Primary key is employee_id + job_code
 
