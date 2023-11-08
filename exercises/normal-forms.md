@@ -10,7 +10,7 @@ ORIGINAL TABLE 1
 
 3NF
 
-Primary Key is employee_id
+Foreign Key is employee_id
 
 | employee_id | name  |
 | ----------- | ----- |
@@ -18,7 +18,7 @@ Primary Key is employee_id
 | e002        | bob   |
 | e003        | alice |
 
-Primary key is employee_id + job_code
+Foreign key is employee_id + job_code
 
 | employee_id | job_code | job       |
 | ----------- | -------- | --------- |
@@ -28,7 +28,7 @@ Primary key is employee_id + job_code
 | e002        | j03      | bartender |
 | e003        | j01      | chef      |
 
-Primary key is state_code
+Foreign key is state_code
 
 | state_code | home_state |
 | ---------- | ---------- |
@@ -53,7 +53,7 @@ ORIGINAL TABLE 2
 
 3NF
 
-Primary key is staff_no
+Foreign key is staff_no
 
 | staff_no | dentist_name  |
 | -------- | ------------- |
@@ -61,7 +61,7 @@ Primary key is staff_no
 | S1024    | Helen Pearson |
 | S1032    | Robin Plevin  |
 
-Primary key is patient_no
+Foreign key is patient_no
 
 | patient_no | patient_name  |
 | ---------- | ------------- |
@@ -70,7 +70,7 @@ Primary key is patient_no
 | P108       | Ian MacKay    |
 | P110       | John Walker   |
 
-Primary key is staff_no + patient_no
+Foreign key is staff_no + patient_no
 
 | staff_no | patient_no | appointment_date | appointment_time | surgery_no |
 | -------- | ---------- | ---------------- | ---------------- | ---------- |
@@ -93,7 +93,7 @@ ORIGINAL TABLE 3
 
 3NF
 
-Primary Key is nin
+Foreign Key is nin
 
 | nin | eName |
 | --- | ----- |
@@ -101,7 +101,7 @@ Primary Key is nin
 | 456 | Diane |
 | 789 | Sarah |
 
-Primary Key is nin + contractNo
+Foreign Key is nin + contractNo
 (I am assuming that hoursWk is per contract)
 
 | nin | contractNo | hoursWk |
@@ -111,7 +111,7 @@ Primary Key is nin + contractNo
 | 789 | 25         | 28      |
 | 123 | 25         | 16      |
 
-Primary Key is contractNo
+Foreign Key is contractNo
 
 (I wasn't sure about this one: I am assuming that contract number might not always correspond to hotelNo. However, contractNo is redundant if it always correspond to hotelNo. In this case, the table immediately below can be removed completely)
 
@@ -120,7 +120,7 @@ Primary Key is contractNo
 | 24         | 25      |
 | 25         | 4       |
 
-Primary Key is hotelNo
+Foreign Key is hotelNo
 
 | hotelNo | hotelLocation |
 | ------- | ------------- |
@@ -141,7 +141,7 @@ ORIGINAL TABLE 4
 
 3NF
 
-Primary Key is book
+Foreign Key is book
 
 | book       | author  |
 | ---------- | ------- |
@@ -151,7 +151,7 @@ Primary Key is book
 | AK         | Tolstoy |
 | Confession | Tolstoy |
 
-Primary Key is author
+Foreign Key is author
 
 | author  | authorNation |
 | ------- | ------------ |
@@ -161,7 +161,7 @@ Primary Key is author
 | Tolstoy | Ru           |
 | Tolstoy | Ru           |
 
-Primary Key is book
+Foreign Key is book
 
 | book       | genre   |
 | ---------- | ------- |
@@ -187,7 +187,7 @@ ORIGINAL TABLE 5
 
 I have no idea what some of the column headings represent, so I am making am assumption: Date refers to the start date of the Unit (UnitID) and UnitID refers to "semester"
 
-Primary key is StudentID + Topic
+Foreign key is StudentID + Topic
 
 | StudentID | Topic | Grade |
 | --------- | ----- | ----- |
@@ -197,7 +197,7 @@ Primary key is StudentID + Topic
 | St2       | Phf   | 4.9   |
 | St2       | AVQ   | 5.0   |
 
-Primary key = unit + date
+Foreign key = unit + date
 
 | UnitID | Date  | TutorID |
 | ------ | ----- | ------- |
@@ -206,7 +206,7 @@ Primary key = unit + date
 | U5     | 05/02 | Tut3    |
 | U4     | 04/02 | Tut5    |
 
-Primary key = TutorID
+Foreign key = TutorID
 
 | TutorID | TutEmail |
 | ------- | -------- |
@@ -214,7 +214,7 @@ Primary key = TutorID
 | Tut3    | tut3@    |
 | Tut5    | tut5@    |
 
-Primary key = TutorID
+Foreign key = TutorID
 
 | TutorID | Topic |
 | ------- | ----- |
@@ -222,7 +222,7 @@ Primary key = TutorID
 | Tut3    | Phf   |
 | Tut5    | AVQ   |
 
-Primary Key = Topic
+Foreign Key = Topic
 
 | Topic | Book |
 | ----- | ---- |
@@ -231,7 +231,7 @@ Primary Key = Topic
 | Phf   | Dl   |
 | AVQ   | St   |
 
-Primary key = Unit + Topic
+Foreign key = Unit + Topic
 
 | UnitID | Topic | Room |
 | ------ | ----- | ---- |
