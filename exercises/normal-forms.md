@@ -38,6 +38,7 @@ Foreign key is state_code
 | 56         | wyoming    |
 | 56         | wyoming    |
 
+need another table to link the last table to everthing esle. right now it is floating.
 ---
 
 ORIGINAL TABLE 2
