@@ -11,8 +11,8 @@ ORIGINAL TABLE 1
 3NF
 
 Foreign Key is employee_id 
-| employee_id | name  |
-| ----------- | ----- |
+| employee_id | name  | 
+ ----------- | ----- |
 | e001        | alice |
 | e002        | bob   |
 | e003        | alice |
