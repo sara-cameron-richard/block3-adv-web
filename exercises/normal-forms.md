@@ -10,8 +10,7 @@ ORIGINAL TABLE 1
 
 3NF
 
-Foreign Key is employee_id
-
+Foreign Key is employee_id 
 | employee_id | name  |
 | ----------- | ----- |
 | e001        | alice |
