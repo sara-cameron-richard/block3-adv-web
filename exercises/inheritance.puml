@@ -115,3 +115,15 @@ class Circle extends Shape2{
 }
 
 @enduml
+
+@startuml
+
+
+
+@enduml
+
+@startuml
+
+
+
+@enduml

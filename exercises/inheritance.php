@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inheritance Exercise</title>
 </head>
 
 <body>
@@ -328,14 +328,6 @@
     <h3>9. Write a php vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</h3>
 
     <?php
-
-    class Vehicle2
-    {
-        public $make;
-        public $model;
-        public $year;
-        public $fuelType;
-    }
 
     ?>
 
