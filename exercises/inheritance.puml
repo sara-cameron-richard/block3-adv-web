@@ -1,12 +1,12 @@
 @startuml
 
+
 class Animal {
-    #testAnimal
     +makeSound()
 }
 
 class Cat extends Animal {
-    #testCat
+    +makeSound()
 }
 
 @enduml
@@ -14,12 +14,104 @@ class Cat extends Animal {
 @startuml
 
 class Vehicle {
-    #testVehicle
     +drive()
 }
 
 class Car extends Vehicle {
-    #testCar
+    +drive()
+}
+
+@enduml
+
+@startuml
+
+class Shape{
+    +getArea()
+}
+
+class Rectangle extends Shape{
+    -width 
+    -length 
+    +__construct()
+    +getArea()
+}
+
+@enduml
+
+@startuml
+
+class Employee{
+    +work() 
+    +getSalary()
+}
+
+class HRManager extends Employee{
+    +work() 
+    +AddEmployee()
+
+}
+
+@enduml
+
+@startuml
+
+class BankAccount{
+    -balance
+    +deposit() 
+    +withdraw() 
+    +getBalance()
+}
+
+class SavingsAccount extends BankAccount{
+    +withdraw()
+}
+
+@enduml
+
+@startuml
+
+class Animal2{
+    +move()
+}
+
+class Cheetah extends Animal2{
+    +move()
+}
+
+@enduml
+
+@startuml
+
+class Person{
+    +firstName 
+    +lastName 
+    +getFirstName() 
+    +getLastName()
+}
+
+class Employee2 extends Person{
+    +employeeId 
+    +employeeTitle 
+    +getEmployeeID()
+    +getLastName()
+}
+
+@enduml
+
+@startuml
+
+class Shape2{
+    +name 
+    +length 
+    +width 
+    +getPerimater() 
+    +getArea()
+}
+
+class Circle extends Shape2{
+    +radius 
+    +getPerimeter() 
+    +getArea()
 }
 
 @enduml

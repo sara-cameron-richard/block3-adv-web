@@ -219,19 +219,124 @@
     $cheetah->move();
     ?>
 
-    <h3>7. Write a php class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.</h3>
+    <h3>7. Write a php class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee2 that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.</h3>
 
     <?php
+
+    class Person
+    {
+        public $firstName;
+        public $lastName;
+
+        public function getFirstName()
+        {
+            return $this->firstName;
+        }
+
+        public function getLastName()
+        {
+            return $this->lastName;
+        }
+    }
+
+    class Employee2 extends Person
+    {
+        public $employeeId;
+        public $employeeTitle;
+
+        public function getEmployeeID()
+        {
+            return $this->employeeId;
+        }
+
+        public function getLastName()
+        {
+            return $this->lastName . " " . $this->employeeId;
+        }
+    }
+
+    $person = new Person();
+    $person->firstName = "John";
+    $person->lastName = "Doe";
+
+    echo $person->getFirstName();
+    echo $person->getLastName();
+
+
+    $employee = new Employee2();
+    $employee->firstName = "Jane";
+    $employee->lastName = "Doe";
+    $employee->employeeId = "123";
+
+    echo $employee->getFirstName();
+    echo $employee->getLastName();
+
     ?>
+
 
     <h3>8. Write a php class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.</h3>
 
     <?php
+
+    class Shape2
+    {
+
+        public $name;
+        public $length;
+        public $width;
+
+        public function getPerimeter()
+        {
+            return $this->length + $this->width;
+        }
+        public function getArea()
+        {
+            return $this->length * $this->width;
+        }
+    }
+
+    $square = new Shape2();
+    $square->name = "Square";
+    $square->length = 5;
+    $square->width = 5;
+    echo "Perimeter of " . $square->name . " is: " . $square->getPerimeter();
+    echo "Area of " . $square->name . " is: " . $square->getArea();
+
+    class Circle extends Shape2
+    {
+
+        public $radius;
+
+        public function getPerimeter()
+        {
+            return $this->radius * $this->radius;
+        }
+        public function getArea()
+        {
+            return $this->getPerimeter() * 3.141592;
+        }
+    }
+
+    $circle = new Circle();
+    $circle->name = "Circle";
+    $circle->radius = 5;
+    echo "Perimeter of " . $circle->name . " is: " . $circle->getPerimeter();
+    echo "Area of " . $circle->name . " is: " . $circle->getArea();
+
     ?>
 
     <h3>9. Write a php vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</h3>
 
     <?php
+
+    class Vehicle2
+    {
+        public $make;
+        public $model;
+        public $year;
+        public $fuelType;
+    }
+
     ?>
 
     <h3>10. Write a php class hierarchy for employees of a company. The base class should be Employee, with subclasses Manager, Developer, and Programmer. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</h3>
