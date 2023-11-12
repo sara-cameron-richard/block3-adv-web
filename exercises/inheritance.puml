@@ -1,0 +1,25 @@
+@startuml
+
+class Animal {
+    #testAnimal
+    +makeSound()
+}
+
+class Cat extends Animal {
+    #testCat
+}
+
+@enduml
+
+@startuml
+
+class Vehicle {
+    #testVehicle
+    +drive()
+}
+
+class Car extends Vehicle {
+    #testCar
+}
+
+@enduml
