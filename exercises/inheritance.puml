@@ -118,7 +118,34 @@ class Circle extends Shape2{
 
 @startuml
 
+class Vehicle2{
+    +make 
+    +model 
+    +year 
+    +fuelType 
+    +totLitres 
+    +startKilometres 
+    +endKilometres 
+    +startFuel
+    +endFuel 
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+}
 
+class Truck extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+}
+
+class Car2 extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+}
+
+class Motorcycle extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+}
 
 @enduml
 

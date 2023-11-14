@@ -329,6 +329,103 @@
 
     <?php
 
+    //     You asked “How does one calculate the approximate maximum speed of a vehicle using its stats? Specifically using engine HP, weight, torque, and RPM.”
+    // he formula for max speed:
+    // vmax = {(2 × Pmax)/(Rho × Cd × A)}^(1/3)
+    // Pmax is the peak HP of the engine. Pmax should be reduced by the transmission losses if you know them (15% might be assumed)
+    // http://www.superstreetonline.com/how-to/engine/modp-1005-drivetrain-power-loss/ (Drivetrain Power Loss - The 15% "Rule"- Modified Magazine)
+    // Rho is the air density (kg/Meter^2)
+    // v is the Velocity of the vehicle (Meters/Second)
+    // Cd is the Drag Coefficient
+    // A is the frontal cross sectional Area of the vehicle (Meters^2).
+
+
+    class Vehicle2
+    {
+        public $make;
+        public $model;
+        public $year;
+        public $fuelType;
+        public $totLitres;
+        public $HP;
+        public $weight;
+        public $torque;
+        public $RPM;
+        public $startKilometres;
+        public $endKilometres;
+        public $startFuel;
+        public $endFuel;
+
+        public function getFuelEfficiency()
+        {
+            return ($this->endKilometres - $this->startKilometres) / ($this->startFuel - $this->endFuel);
+        }
+
+        public function getDistanceTraveled()
+        {
+            return ($this->endKilometres - $this->startKilometres);
+        }
+
+
+        public function getMaxSpeed()
+        {
+        }
+    }
+
+    class Truck extends Vehicle2
+    {
+    }
+
+    $truck = new Truck();
+    $truck->make = "Ford";
+    $truck->model = "F-150";
+    $truck->year = "2020";
+    $truck->fuelType = "Diesel";
+    $truck->totLitres = 200;
+    $truck->startKilometres = 0;
+    $truck->endKilometres = 100;
+    $truck->startFuel = 100;
+    $truck->endFuel = 15;
+
+    echo "Fuel Efficiency of " . $truck->make . " " . $truck->model . " is: " . $truck->getFuelEfficiency() . " km/L";
+    echo "Distance Traveled of " . $truck->make . " " . $truck->model . " is: " . $truck->getDistanceTraveled() . " km";
+
+    class Car2 extends Vehicle2
+    {
+    }
+
+    $Car2 = new Car2();
+    $Car2->make = "Toyota";
+    $Car2->model = "Corolla";
+    $Car2->year = "2018";
+    $Car2->fuelType = "Gas";
+    $Car2->totLitres = 100;
+    $Car2->startKilometres = 4000;
+    $Car2->endKilometres = 4030;
+    $Car2->startFuel = 80;
+    $Car2->endFuel = 67;
+
+    echo "Fuel Efficiency of " . $Car2->make . " " . $Car2->model . " is: " . $Car2->getFuelEfficiency() . " km/L";
+    echo "Distance Traveled of " . $Car2->make . " " . $Car2->model . " is: " . $Car2->getDistanceTraveled() . " km";
+
+    class Motorcycle extends Vehicle2
+    {
+    }
+
+    $Motorcycle = new Motorcycle();
+    $Motorcycle->make = "Harley-Davidson";
+    $Motorcycle->model = "Softail";
+    $Motorcycle->year = "2023";
+    $Motorcycle->fuelType = "Gas";
+    $Motorcycle->totLitres = 40;
+    $Motorcycle->startKilometres = 735;
+    $Motorcycle->endKilometres = 823;
+    $Motorcycle->startFuel = 40;
+    $Motorcycle->endFuel = 5;
+
+    echo "Fuel Efficiency of " . $Motorcycle->make . " " . $Motorcycle->model . " is: " . $Motorcycle->getFuelEfficiency() . " km/L";
+    echo "Distance Traveled of " . $Motorcycle->make . " " . $Motorcycle->model . " is: " . $Motorcycle->getDistanceTraveled() . " km";
+
     ?>
 
     <h3>10. Write a php class hierarchy for employees of a company. The base class should be Employee, with subclasses Manager, Developer, and Programmer. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</h3>
