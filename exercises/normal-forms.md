@@ -10,12 +10,12 @@ ORIGINAL TABLE 1
 
 3NF
 
-Foreign Key is employee_id 
-| employee_id | name  | 
- ----------- | ----- |
-| e001        | alice |
-| e002        | bob   |
-| e003        | alice |
+Foreign Key is employee_id
+| employee_id | name |
+----------- | ----- |
+| e001 | alice |
+| e002 | bob |
+| e003 | alice |
 
 Foreign key is employee_id + job_code
 
@@ -37,8 +37,7 @@ Foreign key is state_code
 | 56         | wyoming    |
 | 56         | wyoming    |
 
-need another table to link the last table to everthing esle. right now it is floating.
----
+## need another table to link the last table to everthing esle. right now it is floating.
 
 ORIGINAL TABLE 2
 
@@ -134,7 +133,7 @@ ORIGINAL TABLE 4
 | book       | genre   | author  | authorNation |
 | ---------- | ------- | ------- | ------------ |
 | Twenty     | SciFi   | Verne   | Fr           |
-| Journey     | SciFi   | Verne   | Fr           |
+| Journey    | SciFi   | Verne   | Fr           |
 | Leaves     | Poetry  | Whitman | Am           |
 | AK         | LitFic  | Tolstoy | Ru           |
 | Confession | AutoBio | Tolstoy | Ru           |
@@ -146,7 +145,7 @@ Foreign Key is book
 | book       | author  |
 | ---------- | ------- |
 | Twenty     | Verne   |
-| Journey     | Verne   |
+| Journey    | Verne   |
 | Leaves     | Whitman |
 | AK         | Tolstoy |
 | Confession | Tolstoy |
@@ -166,7 +165,7 @@ Foreign Key is book
 | book       | genre   |
 | ---------- | ------- |
 | Twenty     | SciFi   |
-| Journey     | SciFi   |
+| Journey    | SciFi   |
 | Leaves     | Poetry  |
 | AK         | LitFic  |
 | Confession | AutoBio |
