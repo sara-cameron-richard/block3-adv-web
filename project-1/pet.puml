@@ -1,0 +1,65 @@
+@startuml
+
+class Species{
+    -species_id
+    -species_name
+}
+
+@enduml
+
+@startuml
+
+class Breed {
+    -breed_id 
+    -species_id 
+    -breed_name
+}
+
+@enduml
+
+@startuml
+
+class Pet{
+    -pet_id 
+    -breed_id
+    -species_id
+    -age
+    -is_purebreed
+    -name
+}
+
+@enduml
+
+@startuml
+
+class PetPricing{
+    -petprice_id
+    -breed_id
+    -species_id
+    -age
+    -is_purebreed
+    -price
+}
+
+@enduml
+
+@startuml
+
+class ToySize{
+    -toysize_id
+    -size_name
+}
+
+@enduml
+
+@startuml
+
+class ToyPricing{
+    -toyprice_id
+    -toysize_id
+    -species_id
+    -toy_name
+    -price
+}
+
+@enduml
