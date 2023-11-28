@@ -1,0 +1,205 @@
+@startuml
+
+
+class Animal {
+    +makeSound()
+}
+
+class Cat extends Animal {
+    +makeSound()
+}
+
+@enduml
+
+
+@startuml
+
+class Vehicle {
+    +drive()
+}
+
+class Car extends Vehicle {
+    +drive()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Shape{
+    +getArea()
+}
+
+class Rectangle extends Shape{
+    -width 
+    -length 
+    +__construct()
+    +getArea()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Employee{
+    +work() 
+    +getSalary()
+}
+
+class HRManager extends Employee{
+    +work() 
+    +AddEmployee()
+
+}
+
+@enduml
+
+
+
+@startuml
+
+class BankAccount{
+    -balance
+    +deposit() 
+    +withdraw() 
+    +getBalance()
+}
+
+class SavingsAccount extends BankAccount{
+    +withdraw()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Animal2{
+    +move()
+}
+
+class Cheetah extends Animal2{
+    +move()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Person{
+    +firstName 
+    +lastName 
+    +getFirstName() 
+    +getLastName()
+}
+
+class Employee2 extends Person{
+    +employeeId 
+    +employeeTitle 
+    +getEmployeeID()
+    +getLastName()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Shape2{
+    +name 
+    +length 
+    +width 
+    +getPerimater() 
+    +getArea()
+}
+
+class Circle extends Shape2{
+    +radius 
+    +getPerimeter() 
+    +getArea()
+}
+
+@enduml
+
+
+
+@startuml
+
+class Vehicle2{
+    +make 
+    +model 
+    +year 
+    +fuelType 
+    +totLitres 
+    +startKilometres 
+    +endKilometres 
+    +startFuel
+    +endFuel 
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+    +getMaxSpeed()
+}
+
+class Truck extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+    +getMaxSpeed()
+}
+
+class Car2 extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+    +getMaxSpeed()
+}
+
+class Motorcycle extends Vehicle2{
+    +getFuelEfficiency()
+    +getDistanceTravelled()
+    +getMaxSpeed()
+}
+
+
+
+@enduml
+
+
+
+@startuml
+
+class Employee3{
+    -name
+    -address
+    -salary
+    -jobTitle
+    +calculateBonus()
+    +performReport()
+    +managePro()
+}
+
+class Manager extends Employee3{
+    +calculateBonus()
+    +performReport()
+    +managePro()
+}
+
+class Developer extends Employee3{
+    +calculateBonus()
+    +performReport()
+    +managePro() 
+}
+
+class Programmer extends Employee3{
+    +calculateBonus()
+    +performReport()
+    +managePro()
+}
+
+@enduml

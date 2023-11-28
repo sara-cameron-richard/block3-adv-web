@@ -10,6 +10,12 @@ Block 3 - Advanced Web Programming Course Notes
 
 ### Links and Notes on Files
 
+- [Project 1 PREP](https://sara67.web582.com/block3-adv-web/project-1/normal-forms-pet.md)
+  Project 1 Prep: 3NF tables, PETS
+
+- [Project 1 PREP](https://sara67.web582.com/block3-adv-web/project-1/pet.puml)
+  Project 1 Prep: UML, PETS
+
 - [Database Normalization](https://sara67.web582.com/block3-adv-web/exercises/normal-forms.md)
   Practicing normalization to 3NF with 5 tables
 
